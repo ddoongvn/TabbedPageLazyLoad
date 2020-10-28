@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView
+    x:Class="TabbedPageLazyLoad.Views.Vehicle"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:prism="http://prismlibrary.com"
+    xmlns:xforms="clr-namespace:Syncfusion.SfMaps.XForms;assembly=Syncfusion.SfMaps.XForms"
+    prism:ViewModelLocator.AutowireViewModel="True">
+    <StackLayout>
+        <Label
+            FontSize="20"
+            HorizontalOptions="Center"
+            Text="{Binding TitlePage}"
+            VerticalOptions="Start" />
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <xforms:SfMaps>
+                <xforms:SfMaps.Layers>
+                    <xforms:ImageryLayer LayerType="OSM" />
+                </xforms:SfMaps.Layers>
+            </xforms:SfMaps>
+        </Grid>
+
+        <Button
+            Command="{Binding PopupCommand}"
+            HorizontalOptions="Center"
+            Text="Popup"
+            VerticalOptions="End" />
+    </StackLayout>
+
+</ContentView>

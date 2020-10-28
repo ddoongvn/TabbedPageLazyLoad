@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage
+    x:Class="TabbedPageLazyLoad.Views.TabbedPageLazy"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:behaviors="clr-namespace:TabbedPageLazyLoad.Behavior"
+    xmlns:prism="http://prismlibrary.com"
+    x:Name="root"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    CurrentPageChanged="root_CurrentPageChanged"
+    NavigationPage.HasNavigationBar="False">
+    <TabbedPage.Behaviors>
+        <!--//<prism:EventToCommandBehavior Command="{Binding CurrentPageChangedCommand}" EventName="CurrentPageChanged" />-->
+        <!--<behaviors:TabbedPageNavigationBehavior />-->
+    </TabbedPage.Behaviors>
+</TabbedPage>
